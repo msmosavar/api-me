@@ -36,15 +36,15 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->renderable(function (Throwable $e) {
-            if ($e->getMessage() === 'This action is unauthorized.') {
-                return response([
-                    'error' => 'This action is unauthorized.'
-                ], 403);
-            }
-            return response([
-                'error' => $e->getMessage()
-            ], $e->getCode() ? $e->getCode() : 400);
-        });
+        // $this->renderable(function (Throwable $e) {
+        //     if ($e->getMessage() === 'This action is unauthorized.') {
+        //         return response([
+        //             'error' => 'This action is unauthorized.'
+        //         ], 403);
+        //     }
+        //     return response([
+        //         'error' => $e->getMessage()
+        //     ], $e->getCode() ? $e->getCode() : 400);
+        // });
     }
 }
